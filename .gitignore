@@ -1,0 +1,24 @@
+# Fichiers système à ignorer
+.DS_Store
+Thumbs.db
+
+# Dossiers à ignorer
+node_modules/
+dist/
+temp/
+cache/
+
+# Fichiers de logs
+*.log
+
+# Sauvegardes temporaires
+*.bak
+*.tmp
+*~
+
+# Fichiers générés par des éditeurs de texte
+.vscode/
+.idea/
+
+# Fichiers de configuration personnels
+.env

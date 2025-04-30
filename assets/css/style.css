@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Feuille de style principale - Data Skill Hub
+   ========================================================================== */
+
+/* -------------------- */
+/* RESET DE BASE        */
+/* -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f7f9fb;
+    color: #333;
+    padding: 0 1rem;
+}
+
+/* -------------------- */
+/* EN-TÊTE              */
+/* -------------------- */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+#site-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover,
+.nav-menu a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* -------------------- */
+/* CONTENU PRINCIPAL    */
+/* -------------------- */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 1rem;
+}
+
+/* -------------------- */
+/* PIED DE PAGE         */
+/* -------------------- */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #e9ecef;
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* -------------------- */
+/* RESPONSIVE DESIGN    */
+/* -------------------- */
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    #site-title {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1rem 0.5rem;
+    }
+}
