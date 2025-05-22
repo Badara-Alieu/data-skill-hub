@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Exercices interactifs sur SQL et Excel - Testez vos compétences avec Data Skill Hub." />
+    <title>Exercices | Data Skill Hub</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="site-title">Data Skill Hub</h1>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="tutoriels.html">Tutoriels</a></li>
+                <li><a href="exercices.html" aria-current="page">Exercices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section aria-labelledby="exercices-heading">
+            <h2 id="exercices-heading">Exercices pratiques</h2>
+            <p>Testez vos connaissances en SQL et Excel avec nos exercices interactifs. Chaque exercice se débloque au fur et à mesure de votre progression.</p>
+
+            <div class="categories">
+
+                <!-- ====================================== -->
+                <!-- Exercices d'Introduction à SQL -->
+                <!-- ====================================== -->
+                <button type="button" class="category-btn" aria-expanded="false" aria-controls="bloc-intro-sql">Introduction à SQL</button>
+                <div id="bloc-intro-sql" class="exercices-bloc" hidden>
+
+                    <div class="exercice" id="exercice-intro_sql-1">
+                        <label for="reponse-intro_sql-1">Écrivez une requête pour sélectionner tous les utilisateurs.</label>
+                        <textarea id="reponse-intro_sql-1" rows="5" aria-label="Réponse à l'exercice 1 - Introduction SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="intro_sql-1" data-type="sql">Valider</button>
+                        <p id="message-intro_sql-1" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-intro_sql-2" style="display: none;">
+                        <label for="reponse-intro_sql-2">Écrivez une requête pour sélectionner uniquement les prénoms des utilisateurs.</label>
+                        <textarea id="reponse-intro_sql-2" rows="5" aria-label="Réponse à l'exercice 2 - Introduction SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="intro_sql-2" data-type="sql">Valider</button>
+                        <p id="message-intro_sql-2" class="message" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <!-- ====================================== -->
+                <!-- Exercices sur SELECT en SQL -->
+                <!-- ====================================== -->
+                <button type="button" class="category-btn" aria-expanded="false" aria-controls="bloc-select-sql">Les requêtes SELECT</button>
+                <div id="bloc-select-sql" class="exercices-bloc" hidden>
+
+                    <div class="exercice" id="exercice-select_sql-1">
+                        <label for="reponse-select_sql-1">Sélectionner toutes les colonnes de la table <code>utilisateurs</code>.</label>
+                        <textarea id="reponse-select_sql-1" rows="5" aria-label="Réponse à l'exercice 1 - SELECT SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="select_sql-1" data-type="sql">Valider</button>
+                        <p id="message-select_sql-1" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-select_sql-2" style="display: none;">
+                        <label for="reponse-select_sql-2">Sélectionner uniquement le prénom et l'email des utilisateurs.</label>
+                        <textarea id="reponse-select_sql-2" rows="5" aria-label="Réponse à l'exercice 2 - SELECT SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="select_sql-2" data-type="sql">Valider</button>
+                        <p id="message-select_sql-2" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-select_sql-3" style="display: none;">
+                        <label for="reponse-select_sql-3">Sélectionner tous les utilisateurs ayant plus de 30 ans.</label>
+                        <textarea id="reponse-select_sql-3" rows="5" aria-label="Réponse à l'exercice 3 - SELECT SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="select_sql-3" data-type="sql">Valider</button>
+                        <p id="message-select_sql-3" class="message" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <!-- ====================================== -->
+                <!-- Exercices sur les Jointures SQL -->
+                <!-- ====================================== -->
+                <button type="button" class="category-btn" aria-expanded="false" aria-controls="bloc-join-sql">Les jointures en SQL</button>
+                <div id="bloc-join-sql" class="exercices-bloc" hidden>
+
+                    <div class="exercice" id="exercice-join_sql-1">
+                        <label for="reponse-join_sql-1">Afficher les prénoms des utilisateurs et les montants de leurs commandes avec une jointure.</label>
+                        <textarea id="reponse-join_sql-1" rows="5" aria-label="Réponse à l'exercice 1 - Jointures SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="join_sql-1" data-type="sql">Valider</button>
+                        <p id="message-join_sql-1" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-join_sql-2" style="display: none;">
+                        <label for="reponse-join_sql-2">Faire un LEFT JOIN entre <code>utilisateurs</code> et <code>commandes</code>.</label>
+                        <textarea id="reponse-join_sql-2" rows="5" aria-label="Réponse à l'exercice 2 - Jointures SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="join_sql-2" data-type="sql">Valider</button>
+                        <p id="message-join_sql-2" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-join_sql-3" style="display: none;">
+                        <label for="reponse-join_sql-3">Faire une double jointure utilisateurs → commandes → produits pour afficher nom utilisateur et produit.</label>
+                        <textarea id="reponse-join_sql-3" rows="5" aria-label="Réponse à l'exercice 3 - Jointures SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="join_sql-3" data-type="sql">Valider</button>
+                        <p id="message-join_sql-3" class="message" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <!-- ====================================== -->
+                <!-- Exercices généraux SQL -->
+                <!-- ====================================== -->
+                <button type="button" class="category-btn" aria-expanded="false" aria-controls="bloc-exo-sql">Exercices SQL généraux</button>
+                <div id="bloc-exo-sql" class="exercices-bloc" hidden>
+
+                    <div class="exercice" id="exercice-exo_sql-1">
+                        <label for="reponse-exo_sql-1">Sélectionner tous les utilisateurs.</label>
+                        <textarea id="reponse-exo_sql-1" rows="5" aria-label="Réponse à l'exercice 1 - Exos SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="exo_sql-1" data-type="sql">Valider</button>
+                        <p id="message-exo_sql-1" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-exo_sql-2" style="display: none;">
+                        <label for="reponse-exo_sql-2">Sélectionner uniquement le prénom et l'email des utilisateurs.</label>
+                        <textarea id="reponse-exo_sql-2" rows="5" aria-label="Réponse à l'exercice 2 - Exos SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="exo_sql-2" data-type="sql">Valider</button>
+                        <p id="message-exo_sql-2" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-exo_sql-3" style="display: none;">
+                        <label for="reponse-exo_sql-3">Sélectionner tous les utilisateurs ayant plus de 30 ans.</label>
+                        <textarea id="reponse-exo_sql-3" rows="5" aria-label="Réponse à l'exercice 3 - Exos SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="exo_sql-3" data-type="sql">Valider</button>
+                        <p id="message-exo_sql-3" class="message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="exercice" id="exercice-exo_sql-4" style="display: none;">
+                        <label for="reponse-exo_sql-4">Supprimer la table <code>utilisateurs</code>.</label>
+                        <textarea id="reponse-exo_sql-4" rows="5" aria-label="Réponse à l'exercice 4 - Exos SQL" placeholder="Votre réponse ici..."></textarea>
+                        <button class="valider-btn" data-id="exo_sql-4" data-type="sql">Valider</button>
+                        <p id="message-exo_sql-4" class="message" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <!-- ====================================== -->
+                <!-- Exercices sur Excel -->
+                <!-- ====================================== -->
+                <button type="button" class="category-btn" aria-expanded="false" aria-controls="bloc-excel">Exercices Excel</button>
+                <div id="bloc-excel" class="exercices-bloc" hidden>
+
+                    <div class="exercice" id="exercice-excel-1">
+                        <label for="reponse-excel-1">Quelle formule permet de faire la somme des cellules A1 à A5 ?</label>
+                        <input type="text" id="reponse-excel-1" aria-label="Réponse exercice 1 Excel" placeholder="Votre réponse ici..." />
+                        <button class="valider-btn" data-id="excel-1" data-type="excel">Valider</button>
+                        <p id="message-excel-1" class="message" aria-live="polite"></p>
+                    </div>
+                </div>
+
+            </div> <!-- Fin .categories -->
+
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Data Skill Hub - Tous droits réservés.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/exercices.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Apprenez à utiliser les jointures en SQL grâce à ce tutoriel de Data Skill Hub." />
+    <title>Les jointures en SQL | Data Skill Hub</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+<header>
+    <h1 id="site-title">Data Skill Hub</h1>
+    <nav aria-label="Navigation principale">
+        <ul class="nav-menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../tutoriels.html" aria-current="page">Tutoriels</a></li>
+            <li><a href="../exercices.html">Exercices</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content">
+    <article aria-labelledby="titre-article">
+        <h1 id="titre-article">Les jointures en SQL</h1>
+
+        <p>Les jointures permettent de combiner les données de plusieurs tables en fonction d’une condition commune. Elles sont essentielles pour travailler avec des bases de données relationnelles.</p>
+
+        <h2>Les différents types de jointures</h2>
+        <ul>
+            <li><strong>INNER JOIN</strong> : sélectionne les lignes avec des correspondances dans les deux tables.</li>
+            <li><strong>LEFT JOIN</strong> : sélectionne toutes les lignes de la table de gauche, même sans correspondance dans la table de droite.</li>
+            <li><strong>RIGHT JOIN</strong> : inverse du LEFT JOIN.</li>
+            <li><strong>FULL JOIN</strong> : sélectionne toutes les lignes, qu’il y ait ou non correspondance.</li>
+        </ul>
+
+        <h2>Exemple de requête avec INNER JOIN</h2>
+        <pre><code>
+SELECT utilisateurs.nom, commandes.date
+FROM utilisateurs
+INNER JOIN commandes ON utilisateurs.id = commandes.utilisateur_id;
+        </code></pre>
+
+        <section aria-labelledby="exercices-sql-jointures">
+            <h2 id="exercices-sql-jointures">Exercices pratiques</h2>
+
+                <!-- Exercice 1 -->
+                <div class="exercice" id="exercice-join_sql-1">
+                    <label for="reponse-join_sql-1">Écrivez une requête SQL pour sélectionner les prénoms des utilisateurs et les montants de leurs commandes.</label>
+                    <textarea id="reponse-join_sql-1" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="join_sql-1" data-type="sql" aria-label="Valider l'exercice 1">Valider</button>
+                    <p id="message-join_sql-1" class="message" aria-live="polite"></p>
+                </div>
+
+                <!-- Exercice 2 -->
+                <div class="exercice" id="exercice-join_sql-2" style="display: none;">
+                    <label for="reponse-join_sql-2">Écrivez une requête SQL utilisant un LEFT JOIN entre les tables <code>utilisateurs</code> et <code>commandes</code>.</label>
+                    <textarea id="reponse-join_sql-2" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="join_sql-2" data-type="sql" aria-label="Valider l'exercice 2">Valider</button>
+                    <p id="message-join_sql-2" class="message" aria-live="polite"></p>
+                </div>
+
+                <!-- Exercice 3 -->
+                <div class="exercice" id="exercice-join_sql-3" style="display: none;">
+                    <label for="reponse-join_sql-3">Écrivez une requête SQL pour afficher les noms des utilisateurs et l’identifiant de leurs commandes (avec INNER JOIN).</label>
+                    <textarea id="reponse-join_sql-3" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="join_sql-3" data-type="sql" aria-label="Valider l'exercice 3">Valider</button>
+                    <p id="message-join_sql-3" class="message" aria-live="polite"></p>
+                </div>
+
+                <!-- Exercice 4 -->
+                <div class="exercice" id="exercice-join_sql-4" style="display: none;">
+                    <label for="reponse-join_sql-4">Écrivez une requête SQL pour afficher les noms des utilisateurs et le nom des produits commandés (avec double INNER JOIN).</label>
+                    <textarea id="reponse-join_sql-4" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="join_sql-4" data-type="sql" aria-label="Valider l'exercice 4">Valider</button>
+                    <p id="message-join_sql-4" class="message" aria-live="polite"></p>
+                </div> 
+
+        </section>
+    </article>
+</main>
+
+<footer role="contentinfo">
+    <p>&copy; 2025 Data Skill Hub - Tous droits réservés.</p>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/exercices.js"></script>
+</body>
+</html>

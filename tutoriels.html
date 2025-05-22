@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Liste des tutoriels MySQL, PostgreSQL et Excel disponibles sur Data Skill Hub." />
+        <title>Tutoriels | Data Skill Hub</title>
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1 id="site-title">Data Skill Hub</h1>
+            <nav aria-label="Navigation principale">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="tutoriels.html" aria-current="page">Tutoriels</a></li>
+                    <li><a href="exercices.html">Exercices</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact_local.html">Contact Local</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section aria-labelledby="tutoriels-heading">
+                <h2 id="tutoriels-heading">Nos tutoriels</h2>
+                <p>Choisissez une catégorie pour explorer les tutoriels disponibles :</p>
+
+                <div class="categories">
+                    <button type="button" class="category-btn" aria-expanded="false" aria-controls="liste-sql">SQL</button>
+                    <ul id="liste-sql" class="tutoriels-liste" hidden>
+                        <li><a href="tutoriels/sql_intro.html">Introduction à SQL</a></li>
+			<li><a href="tutoriels/sql_select.html">La clause SELECT</a></li>
+                        <li><a href="tutoriels/sql_jointures.html">Les jointures en SQL</a></li>
+                    </ul>
+
+                    <button type="button" class="category-btn" aria-expanded="false" aria-controls="liste-excel">Excel</button>
+                    <ul id="liste-excel" class="tutoriels-liste" hidden>
+                        <li><a href="tutoriels/excel_formules.html">Formules de base</a></li>
+                        <!-- D'autres tutoriels Excel peuvent être ajoutés ici -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
+            <p>&copy; 2025 Data Skill Hub - Tous droits réservés.</p>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/tutoriels.js"></script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Introduction à SQL - Découvrez les bases de SQL avec Data Skill Hub." />
+    <title>Introduction à SQL | Data Skill Hub</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="site-title">Data Skill Hub</h1>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../tutoriels.html" aria-current="page">Tutoriels</a></li>
+                <li><a href="../exercices.html">Exercices</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article aria-labelledby="titre-article">
+            <h1 id="titre-article">Introduction à SQL</h1>
+
+            <section aria-labelledby="intro-sql">
+                <h2 id="intro-sql">Pourquoi apprendre SQL ?</h2>
+                <p>SQL (Structured Query Language) est le langage utilisé pour interagir avec les bases de données relationnelles. Il est indispensable pour analyser, extraire et manipuler les données dans des systèmes comme MySQL, PostgreSQL, Oracle ou SQL Server.</p>
+            </section>
+
+            <section aria-labelledby="bases-sql">
+                <h2 id="bases-sql">Les bases de SQL</h2>
+                <p>Une base de données relationnelle est composée de tables. Une table ressemble à un tableau Excel : elle contient des lignes (enregistrements) et des colonnes (champs).</p>
+
+                <p>Exemple de table <strong>utilisateurs</strong> :</p>
+
+                <pre><code>
+| id | prenom |      email      |
+|----|--------|-----------------|
+| 1  | Alice  | alice@mail.com  |
+| 2  | Bob    | bob@mail.com    |
+                </code></pre>
+
+                <p>La requête suivante permet de sélectionner toutes les données :</p>
+
+                <pre><code>SELECT * FROM utilisateurs;</code></pre>
+
+                <p><strong>Explication :</strong></p>
+                <ul>
+                    <li><code>SELECT</code> : pour lire des données</li>
+                    <li><code>*</code> : signifie "toutes les colonnes"</li>
+                    <li><code>FROM utilisateurs</code> : cible la table <code>utilisateurs</code></li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="commandes-sql">
+                <h2 id="commandes-sql">Commandes SQL de base</h2>
+                <ul>
+                    <li><strong>SELECT</strong> : pour lire des données</li>
+                    <li><strong>INSERT</strong> : pour ajouter des données</li>
+                    <li><strong>UPDATE</strong> : pour modifier des données</li>
+                    <li><strong>DELETE</strong> : pour supprimer des données</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="bonnes-pratiques">
+                <h2 id="bonnes-pratiques">Bonnes pratiques en SQL</h2>
+                <ul>
+                    <li>Écrire les mots-clés SQL en majuscules (par convention)</li>
+                    <li>Ne pas oublier le point-virgule en fin de requête</li>
+                    <li>Faire attention aux noms de table et de colonne (ils peuvent être sensibles à la casse)</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="exercices-sql-intro">
+                <h2 id="exercices-sql-intro">Exercices pratiques</h2>
+
+                <!-- Exercice 1 -->
+                <div class="exercice" id="exercice-intro_sql-1">
+                    <label for="reponse-intro_sql-1">Écrivez une requête SQL pour sélectionner tous les utilisateurs.</label>
+                    <textarea id="reponse-intro_sql-1" aria-label="Réponse pour l'exercice 1 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="intro_sql-1" data-type="sql" aria-label="Valider l'exercice 1">Valider</button>
+                    <p id="message-intro_sql-1" class="message" aria-live="polite"></p>
+                </div>
+
+                <!-- Exercice 2 -->
+                <div class="exercice" id="exercice-intro_sql-2" style="display: none;">
+                    <label for="reponse-intro_sql-2">Écrivez une requête SQL pour sélectionner uniquement les prénoms des utilisateurs.</label>
+                    <textarea id="reponse-intro_sql-2" aria-label="Réponse pour l'exercice 2 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="intro_sql-2" data-type="sql" aria-label="Valider l'exercice 2">Valider</button>
+                    <p id="message-intro_sql-2" class="message" aria-live="polite"></p>
+                </div>
+
+            </section>
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Data Skill Hub - Tous droits réservés.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/exercices.js"></script>
+</body>
+</html>

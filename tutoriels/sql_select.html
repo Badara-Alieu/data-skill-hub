@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Découvrez la commande SELECT en SQL - Data Skill Hub" />
+    <title>La commande SELECT | Data Skill Hub</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="site-title">Data Skill Hub</h1>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../tutoriels.html" aria-current="page">Tutoriels</a></li>
+                <li><a href="../exercices.html">Exercices</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article aria-labelledby="titre-tutoriel">
+            <h1 id="titre-tutoriel">La commande SELECT en SQL</h1>
+
+            <section aria-labelledby="section-intro">
+                <h2 id="section-intro">Introduction</h2>
+                <p>La commande <code>SELECT</code> est utilisée pour extraire des données d'une base de données. C'est l'une des commandes les plus utilisées en SQL.</p>
+            </section>
+
+            <section aria-labelledby="section-syntaxe">
+                <h2 id="section-syntaxe">Syntaxe de base</h2>
+                <pre><code>SELECT colonnes FROM table;</code></pre>
+
+                <p><strong>Exemple :</strong></p>
+                <pre><code>SELECT nom, email FROM utilisateurs;</code></pre>
+            </section>
+
+            <section aria-labelledby="section-conditions">
+                <h2 id="section-conditions">Utilisation de conditions</h2>
+                <p>Vous pouvez filtrer les résultats avec <code>WHERE</code> :</p>
+                <pre><code>SELECT * FROM utilisateurs WHERE age &gt; 25;</code></pre>
+            </section>
+
+            <section aria-labelledby="exercices-select">
+                <h2 id="exercices-select">Exercices pratiques</h2>
+
+                <!-- Exercice 1 -->
+                <div class="exercice" id="exercice-select_sql-1">
+                    <label for="reponse-select_sql-1">Écrivez une requête SQL pour sélectionner le prénom, le pays et l'email de tous les utilisateurs.s</label>
+                    <textarea id="reponse-select_sql-1" aria-label="Réponse pour l'exercice 1 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="select_sql-1" data-type="sql" aria-label="Valider l'exercice 1">Valider</button>
+                    <p id="message-select_sql-1" class="message" aria-live="polite"></p>
+                </div>
+
+                <!-- Exercice 2 -->
+                <div class="exercice" id="exercice-select_sql-2" style="display: none;">
+                    <label for="reponse-select_sql-2">Écrivez une requête pour afficher le prénom et la date d'inscription des utilisateurs.</label>
+                    <textarea id="reponse-select_sql-2" aria-label="Réponse pour l'exercice 2 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="select_sql-2" data-type="sql" aria-label="Valider l'exercice 2">Valider</button>
+                    <p id="message-select_sql-2" class="message" aria-live="polite"></p>
+                </div>
+
+                <!-- Exercice 3 -->
+                <div class="exercice" id="exercice-select_sql-3" style="display: none;">
+                    <label for="reponse-select_sql-3">Écrivez une requête pour sélectionner tous les utilisateurs dont le pays d'origine commence par 'ma'.</label>
+                    <textarea id="reponse-select_sql-3" aria-label="Réponse pour l'exercice 3 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
+                    <button class="valider-btn" data-id="select_sql-3" data-type="sql" aria-label="Valider l'exercice 3">Valider</button>
+                    <p id="message-select_sql-3" class="message" aria-live="polite"></p>
+                </div>
+
+            </section>
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Data Skill Hub - Tous droits réservés.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/exercices.js"></script>
+</body>
+</html>

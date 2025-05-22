@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Formulaire de contact - Contactez l'équipe de Data Skill Hub pour toute question ou suggestion." />
+        <title>Contact | Data Skill Hub</title>
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1 id="site-title">Data Skill Hub</h1>
+            <nav aria-label="Navigation principale">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="tutoriels.html">Tutoriels</a></li>
+                    <li><a href="exercices.html">Exercices</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li><a href="contact_local.html">Contact Local</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contactez-nous</h2>
+                <p>Une question ? Une suggestion ? Écrivez-nous via ce formulaire :</p>
+
+                <form id="contact-form" class="form-bloc" aria-describedby="form-info">
+                    <div class="form-group">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail :</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="valider-btn">Envoyer</button>
+                    <p class="message" id="form-message" aria-live="polite"></p>
+                </form>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
+            <p>&copy; 2025 Data Skill Hub - Tous droits réservés.</p>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/contact.js"></script>
+    </body>
+</html>

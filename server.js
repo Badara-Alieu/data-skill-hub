@@ -27,7 +27,7 @@ app.post("/envoyer-contact", (req, res) => {
 
     // Tu peux ajouter ici une logique pour enregistrer ou envoyer le message
 
-    res.status(200).json({ success: true, message: "Message bien reçu !" });
+    res.status(200).json({ success: true, message: "Merci pour votre message ! Nous vous répondrons rapidement." });
 });
 
 // Lancement du serveur
