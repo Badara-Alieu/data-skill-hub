@@ -39,14 +39,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // --------------------------------------------------
     const bonnesReponses = {
         // Exercices de exercices.html
+        ////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
+        "tutoriels_intro_sql-1": [
+            "select * from produits;"
+        ],
+        "tutoriels_intro_sql-2": [
+            "select nom from produits;"
+        ],
+        
+        ////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
         "exo_sql-1": [
-            "select * from utilisateurs;"
+            "select prenom, pays, email from utilisateurs;"
         ],
         "exo_sql-2": [
-            "select prenom, email from utilisateurs;"
+            "select prenom, dateinscription from utilisateurs;"
         ],
         "exo_sql-3": [
-            "select * from utilisateurs where age > 30;"
+            "select * from utilisateurs where pays like 'ma%';"
         ],
         "exo_sql-4": [
             "drop table utilisateurs;",
@@ -58,31 +69,28 @@ document.addEventListener("DOMContentLoaded", () => {
             "select * from utilisateurs;"
         ],
         "intro_sql-2": [
-            "select prenom from utilisateurs;",
-            "select prenom, email from utilisateurs;"
+            "select prenom from utilisateurs;"
         ],
 
         // Exercices de sql_select.html
         "select_sql-1": [
-            "select nom, email from utilisateurs;"
+            "select * from utilisateurs;"
         ],
         "select_sql-2": [
-            "select * from utilisateurs where age > 25;"
+            "select prenom, email from utilisateurs;"
         ],
         "select_sql-3": [
-            "select * from utilisateurs order by age desc;"
+            "select * from utilisateurs where age > 30;"
         ],
 
         // Exercices de sql_jointures.html
         "join_sql-1": [
             "select utilisateurs.prenom, commandes.montant from utilisateurs inner join commandes on utilisateurs.id = commandes.utilisateur_id;",
-            "select utilisateurs.prenom, commandes.montant from utilisateurs join commandes on utilisateurs.id = commandes.utilisateur_id;"
+            "select u.prenom, c.montant from utilisateurs u join commandes c on u.id = c.utilisateur_id;"
         ],
         "join_sql-2": [
-            "select utilisateurs.nom, commandes.id_commande from utilisateurs inner join commandes on utilisateurs.id_utilisateur = commandes.id_utilisateur;",
-            "select u.nom, c.id_commande from utilisateurs u inner join commandes c on u.id_utilisateur = c.id_utilisateur;",
-            "select utilisateurs.nom, commandes.id_commande from utilisateurs join commandes on utilisateurs.id_utilisateur = commandes.id_utilisateur;",
-            "select u.nom, c.id_commande from utilisateurs u join commandes c on u.id_utilisateur = c.id_utilisateur;"
+            "select * from utilisateurs left join commandes on utilisateurs.id_utilisateur = commandes.id_utilisateur;",
+            "select * from utilisateurs u left join commandes c on u.id_utilisateur = c.id_utilisateur;"
         ],
         "join_sql-3": [
             "select utilisateurs.nom, produits.nom from utilisateurs inner join commandes on utilisateurs.id_utilisateur = commandes.id_utilisateur inner join produits on commandes.id_produit = produits.id_produit;",
