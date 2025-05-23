@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Formulaire de contact - Contactez l'équipe de Data Skill Hub pour toute question ou suggestion." />
         <title>Contact | Data Skill Hub</title>
-
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
 
@@ -27,7 +26,7 @@
                 <h2 id="contact-heading">Contactez-nous</h2>
                 <p>Une question ? Une suggestion ? Écrivez-nous via ce formulaire :</p>
 
-                <form id="contact-form" class="form-bloc" aria-describedby="form-info">
+                <form action="https://formspree.io/f/xbloebwz" method="POST" class="form-bloc">
                     <div class="form-group">
                         <label for="nom">Nom :</label>
                         <input type="text" id="nom" name="nom" required />
@@ -44,7 +43,6 @@
                     </div>
 
                     <button type="submit" class="valider-btn">Envoyer</button>
-                    <p class="message" id="form-message" aria-live="polite"></p>
                 </form>
             </section>
         </main>
@@ -54,6 +52,5 @@
         </footer>
 
         <script src="assets/js/main.js"></script>
-        <script src="assets/js/contact.js"></script>
     </body>
 </html>
