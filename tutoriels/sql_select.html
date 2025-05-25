@@ -23,54 +23,66 @@
 
     <main id="main-content">
         <article aria-labelledby="titre-tutoriel">
-            <h1 id="titre-tutoriel">La commande SELECT en SQL</h1>
+            <h1 id="titre-tutoriel">Introduction à l’instruction MySQL SELECT FROM</h1>
 
-            <section aria-labelledby="section-intro">
-                <h2 id="section-intro">Introduction</h2>
-                <p>La commande <code>SELECT</code> est utilisée pour extraire des données d'une base de données. C'est l'une des commandes les plus utilisées en SQL.</p>
+            <section>
+                <p>L'instruction <strong>SELECT</strong> permet de sélectionner des données provenant d'une ou plusieurs tables. Pour écrire une instruction SELECT en MySQL, vous utilisez cette syntaxe :</p>
+                <pre><code>SELECT liste_de_sélection
+FROM nom_table;</code></pre>
             </section>
 
-            <section aria-labelledby="section-syntaxe">
-                <h2 id="section-syntaxe">Syntaxe de base</h2>
-                <pre><code>SELECT colonnes FROM table;</code></pre>
-
-                <p><strong>Exemple :</strong></p>
-                <pre><code>SELECT nom, email FROM utilisateurs;</code></pre>
+            <section>
+                <h2>Explication de la syntaxe</h2>
+                <ul>
+                    <li><strong>Premièrement</strong>, indiquez une ou plusieurs colonnes à partir desquelles vous souhaitez sélectionner des données après le mot-clé <code>SELECT</code>. Si la liste contient plusieurs colonnes, séparez-les par une virgule (,).</li>
+                    <li><strong>Deuxièmement</strong>, indiquez le nom de la table à partir de laquelle vous voulez extraire les données après le mot-clé <code>FROM</code>.</li>
+                </ul>
+                <p>Le point-virgule (<code>;</code>) marque la fin d’une instruction. Il est obligatoire si vous enchaînez plusieurs requêtes.</p>
+                <p>Par convention, les mots-clés SQL sont écrits en majuscules, mais SQL n’est pas sensible à la casse :</p>
+                <pre><code>select liste_de_sélection
+from nom_table;</code></pre>
+                <p>MySQL évalue d’abord la clause <code>FROM</code>, puis la clause <code>SELECT</code>.</p>
             </section>
 
-            <section aria-labelledby="section-conditions">
-                <h2 id="section-conditions">Utilisation de conditions</h2>
-                <p>Vous pouvez filtrer les résultats avec <code>WHERE</code> :</p>
-                <pre><code>SELECT * FROM utilisateurs WHERE age &gt; 25;</code></pre>
+            <section>
+                <h2>Exemples d’utilisation de SELECT FROM</h2>
+                <p>Supposons que nous ayons une table <code>employees</code> avec les colonnes : <code>employeeNumber</code>, <code>lastName</code>, <code>firstName</code>, <code>extension</code>, <code>email</code>, <code>officeCode</code>, <code>reportsTo</code> et <code>jobTitle</code>.</p>
+
+                <h3>1) Sélection d’une seule colonne</h3>
+                <pre><code>SELECT lastName
+FROM employees;</code></pre>
+
+                <h3>2) Sélection de plusieurs colonnes</h3>
+                <pre><code>SELECT 
+    lastName, 
+    firstName, 
+    jobTitle
+FROM employees;</code></pre>
+
+                <h3>3) Sélection de toutes les colonnes</h3>
+                <p>Exemple avec les noms de colonnes :</p>
+                <pre><code>SELECT employeeNumber,
+       lastName,
+       firstName,
+       extension,
+       email,
+       officeCode,
+       reportsTo,
+       jobTitle
+FROM employees;</code></pre>
+                <p>Ou avec l’astérisque :</p>
+                <pre><code>SELECT * 
+FROM employees;</code></pre>
+                <p><strong>Remarque :</strong> On utilise <code>SELECT *</code> pour des tests rapides, mais il est recommandé de nommer les colonnes pour de meilleures performances et clarté.</p>
             </section>
 
-            <section aria-labelledby="exercices-select">
-                <h2 id="exercices-select">Exercices pratiques</h2>
-
-                <!-- Exercice 1 -->
-                <div class="exercice" id="exercice-select_sql-1">
-                    <label for="reponse-select_sql-1">Écrivez une requête SQL pour sélectionner le prénom, le pays et l'email de tous les utilisateurs.s</label>
-                    <textarea id="reponse-select_sql-1" aria-label="Réponse pour l'exercice 1 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
-                    <button class="valider-btn" data-id="select_sql-1" data-type="sql" aria-label="Valider l'exercice 1">Valider</button>
-                    <p id="message-select_sql-1" class="message" aria-live="polite"></p>
-                </div>
-
-                <!-- Exercice 2 -->
-                <div class="exercice" id="exercice-select_sql-2" style="display: none;">
-                    <label for="reponse-select_sql-2">Écrivez une requête pour afficher le prénom et la date d'inscription des utilisateurs.</label>
-                    <textarea id="reponse-select_sql-2" aria-label="Réponse pour l'exercice 2 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
-                    <button class="valider-btn" data-id="select_sql-2" data-type="sql" aria-label="Valider l'exercice 2">Valider</button>
-                    <p id="message-select_sql-2" class="message" aria-live="polite"></p>
-                </div>
-
-                <!-- Exercice 3 -->
-                <div class="exercice" id="exercice-select_sql-3" style="display: none;">
-                    <label for="reponse-select_sql-3">Écrivez une requête pour sélectionner tous les utilisateurs dont le pays d'origine commence par 'ma'.</label>
-                    <textarea id="reponse-select_sql-3" aria-label="Réponse pour l'exercice 3 - SQL" rows="5" placeholder="Votre réponse ici..."></textarea>
-                    <button class="valider-btn" data-id="select_sql-3" data-type="sql" aria-label="Valider l'exercice 3">Valider</button>
-                    <p id="message-select_sql-3" class="message" aria-live="polite"></p>
-                </div>
-
+            <section>
+                <h2>Résumé</h2>
+                <ul>
+                    <li>Utilisez <code>SELECT FROM</code> pour extraire des données d’une table.</li>
+                    <li>Utilisez <code>SELECT *</code> pour récupérer toutes les colonnes d’un coup.</li>
+                    <li>Privilégiez la sélection de colonnes nommées dans les applications professionnelles.</li>
+                </ul>
             </section>
         </article>
     </main>
@@ -80,6 +92,6 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/exercices.js"></script>
 </body>
 </html>
+
